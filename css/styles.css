@@ -120,7 +120,7 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin: 10px 20px 0;
 }
 .filter-options select {
   background-color: white;
@@ -289,4 +289,7 @@ nav h1 a {
 		flex-direction: unset;
 	}
 	
+	.filter-options h2 {
+		margin: 0 20px;
+	}
 }
