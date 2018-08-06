@@ -134,7 +134,8 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -263,7 +264,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -277,4 +278,12 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+
+@media screen and (min-width: 640px) {
+	.filter-options {
+		flex-direction: unset;
+	}
+	
 }
