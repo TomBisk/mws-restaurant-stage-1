@@ -25,6 +25,11 @@ a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+
+:focus {
+	outline: 3px solid red;
+}
+
 a img{
 	border: none 0px #fff;
 }
