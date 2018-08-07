@@ -47,6 +47,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+	box-sizing: border-box;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -74,7 +75,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: calc(100% - 80px);
 }
 
 /* Display list items side by side */
@@ -198,23 +199,31 @@ nav h1 a {
   width: 100%;
   z-index: 1000;
 }
+
+.inside #maincontent {
+	display: flex;
+	flex-direction: column;
+}
+
 .inside #map-container {
   background: blue none repeat scroll 0 0;
+	z-index: 999;
+	margin-top: 131px;
   height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
+/*  position: fixed;*/
+/*  right: 0;*/
+/*  top: 80px;*/
+/*  width: 100%;*/
 }
 .inside #map {
   background-color: #ccc;
-  height: 100%;
-  width: 100%;
+/*  height: 100px;*/
+/*  width: 100px;*/
 }
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100vw;
 }
 #restaurant-name {
   color: #f18200;
@@ -227,7 +236,9 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+	width: 100%;
+	margin: 0 auto;
+	
 }
 #restaurant-address {
   font-size: 12pt;
@@ -243,13 +254,14 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
-  width: 50%;
+/*  width: 100%;*/
+	box-sizing: border-box;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -292,4 +304,34 @@ nav h1 a {
 	.filter-options h2 {
 		margin: 0 20px;
 	}
+	
+	#breadcrumb {
+    width: calc(50% - 80px);
+	}
+	
+	.inside #maincontent {
+		display: initial;
+	}
+	
+	.inside #map-container {
+		margin-top: 0;
+		position: fixed;
+		right: 0;
+		top: 80px;
+		width: 50%;
+		z-index: unset;
+	}
+	#restaurant-container, #reviews-container {
+		width: 50%;
+	}
+	
+	.inside #map {
+		height: calc(100vh - 80px);
+		width: 100%;
+	}
+	
+	.inside #footer {
+		width: 50%;
+	}
+	
 }
