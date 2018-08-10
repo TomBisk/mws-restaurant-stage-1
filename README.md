@@ -1,32 +1,65 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews App (Stage 1)
 
-## Project Overview: Stage 1
+## Udacity Front-End Nanodegree Program project [6/8] (August 2018)
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+* [Project Overview](#project-overview)
+* [How to run](#how-to-run)
+* [Functionality](#functionality)
+* [Dependencies](#dependencies)
 
-### Specification
+### Project Overview
+For the **Restaurant Reviews** project, general purpose was incrementally convert a static webpage to a mobile-ready web application.
+The [provided code](https://github.com/udacity/mws-restaurant-stage-1) has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all.
+ 
+In **Stage One**, project requires to:
+* convert a static design to the design responsive on different sized displays;
+* correct lacking accessibility for screen reader use (proper semantic elements and ARIA-labels, ARIA-roles, alt attributes for images);
+* add a service worker to begin the process of creating a seamless offline experience for the users.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+### How to run
+To run static website:
+* clone the repository  ```git@github.com:TomBisk/feed-reader-testing.git``` or download [zipoed file](https://github.com/TomBisk/feed-reader-testing/archive/master.zip);
+* from inside the project directory, launch a local client server using Python^ from your terminal: 
+  * Python 2: ```python -m SimpleHTTPServer 8000``` ;
+  * Python 3: ```python3 -m http.server 8000```;
+* visit the site in your browser at ```http://localhost:8000```...
 
-### What do I do from here?
+...or you can run [live version](https://tombisk.github.io/restaurant-reviews-app/).
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+^ You can check your Python version  by using python -V. If you don't have Python installed - download it and install from this [website](https://www.python.org/). 
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+### Functionality
+All reguired functionalities have been tested with the following tools:
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+To testing responsiveness:
+* Chrome DevTools' Device Mode
+* my own smartphone :)
 
-## Leaflet.js and Mapbox:
+To testing accessibility:
+* NVDA screenreader and `tab` key.
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+To testing  service worker:
+* `offline` mode for registered service worker in `Application` tab of Chrome DevTools;
+* offline mode in my own smartphone :)
 
-### Note about ES6
+To testing general functionality:
+* Chrome
+* Chrome Canary
+* Firefox
+* Puffin for Android
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+### Dependencies
+The following resources have been used in this project:
 
+Website:
+*  Udacity's [starter code]( https://github.com/udacity/mws-restaurant-stage-1 )
+
+Map:
+* [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/)
+
+Service Worker:
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+* [Google Developers](https://developers.google.com/web/fundamentals/primers/service-workers/)
+* [mickl.net](https://mickl.net/2016/10/24/czym-sa-progressive-web-apps-i-do-czego-mozna-uzyc-service-worker-ow/) (PL)
 
 
