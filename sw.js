@@ -31,6 +31,7 @@ const cachedFiles = [
 	"./restaurant.html?id=10",
 ] ;
 
+
 self.addEventListener("install", function(event) {
 	event.waitUntil(
 		caches.open(cacheName).then(function(cache) {
@@ -38,6 +39,7 @@ self.addEventListener("install", function(event) {
 		})
 	);
 });
+
 
 self.addEventListener("activate", function(event) {
 	event.waitUntil(
