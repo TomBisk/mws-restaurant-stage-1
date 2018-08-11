@@ -18,7 +18,7 @@ In **Stage One**, project requires to:
 
 ### How to run
 To run static website:
-* clone the repository  ```git@github.com:TomBisk/feed-reader-testing.git``` or download [zipoed file](https://github.com/TomBisk/feed-reader-testing/archive/master.zip);
+* clone the repository  ```git@github.com:TomBisk/feed-reader-testing.git``` or download [zipped file](https://github.com/TomBisk/feed-reader-testing/archive/master.zip);
 * from inside the project directory, launch a local client server using Python^ from your terminal: 
   * Python 2: ```python -m SimpleHTTPServer 8000``` ;
   * Python 3: ```python3 -m http.server 8000```;
